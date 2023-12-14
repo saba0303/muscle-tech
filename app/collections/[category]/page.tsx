@@ -1,13 +1,21 @@
 import CollectionsHeader from "@/components/collections-page/header/CollectionsHeader"
 import { AdvertBanners } from "@/components/collections-page/advert/AdvertBanners"
 import Container from "./Container"
-import type { ReactNode } from 'react'
+import Head from "next/head"
 import type { Goals } from "@/utils/types"
 export const revalidate = 3600
 export const fetchCache = 'force-cache'
-export default function Layout(props: { children: ReactNode, params: { category: string, goal: string }, searchParams: { goal: Goals[] | Goals, price: number | string } }) {
+export default function Layout(props: {
+    params: { category: string, goal: string },
+    searchParams: { goal: Goals[] | Goals, price: number | string }
+}) {
 
     return <>
+        <Head>
+            <title>Collections</title>
+            <meta name='Collections' content='Collections Page' />
+
+        </Head>
         <CollectionsHeader category={props.params.category} />
         <AdvertBanners />
         <section style={{

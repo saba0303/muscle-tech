@@ -6,6 +6,7 @@ import Cart from "@/components/cart/Cart"
 import Footer from '@/components/footer/Footer'
 import RecomendedProducts from "@/components/cart/RecomendedProducts"
 import Nav from '@/components/navigation/Nav'
+import Head from 'next/head'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -20,6 +21,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Head>
+        <title>Muscle-Tech</title>
+        <meta name='Muscle-Tech' content='Muscle-Tech' />
+
+      </Head>
       <body className={inter.className}>
         <ContextProvider >
           <div id='cart-container'></div>

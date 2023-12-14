@@ -15,7 +15,7 @@ export default function CheckoutBody() {
         if (cart.cartItems.length === 0) {
             router.push('/collections/products')
         }
-    }, [cart])
+    }, [cart, router,])
     return <section className="checkout-body">
         <div className="purchased-list">
             {cart.cartItems.map(product => <motion.div layout initial={{ opacity: 0, y: -50 }} whileInView={{ opacity: 1, y: 0 }} className="purchased-item" key={product.id}>
