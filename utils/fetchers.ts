@@ -2,8 +2,8 @@ import { createClient } from "@supabase/supabase-js"
 import type { Goals, Product } from "./types"
 
 import { type FiltersType } from "@/components/collections-page/products/Products"
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_KEY
+const supabaseUrl = process.env.supabase_url
+const supabaseKey = process.env.supabase_key
 export const client = createClient(supabaseUrl as string, supabaseKey as string,)
 
 // fetchers 
