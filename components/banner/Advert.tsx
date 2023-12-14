@@ -8,7 +8,7 @@ export default function BannerAdvert() {
         router.push('/collections/products')
     }
     return <div className="banner-ad">
-        <Image src={hero2} alt="hr-2" width={500} height={500} />
+        <Image unoptimized={true} src={hero2} alt="hr-2" width={500} height={500} />
         <span className="select-prod">SELECT PRODUCTS</span>
         <button onClick={navigate}>SHOP NOW</button>
     </div>
